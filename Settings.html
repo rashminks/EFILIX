@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Settings Page</title>
+    <style>
+        body {
+            background-color: #f5f7fa; /* Light background */
+        }
+        .navbar {
+            background-color: #3498db; /* Vibrant blue */
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+            transition: color 0.3s;
+        }
+        .navbar-brand:hover, .nav-link:hover {
+            color: #d6eaf8 !important; /* Lighter blue */
+        }
+        .settings-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #3498db; /* Blue border */
+            border-radius: 8px;
+            box-shadow: 0px 4px 20px rgba(52, 152, 219, 0.3); /* Blue shadow */
+        }
+        .section-heading {
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #3498db; /* Blue color */
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        .divider {
+            border-bottom: 1px solid #e0e0e0;
+            margin: 20px 0;
+        }
+        .btn-primary, .btn-secondary, .btn-danger {
+            background-color: #3498db; /* Blue color */
+            border: none;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover, .btn-secondary:hover, .btn-danger:hover {
+            background-color: #2980b9; /* Darker blue */
+        }
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            border-top: 2px solid #3498db;
+        }
+        footer a {
+            color: #85c1e9;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #d6eaf8;
+            text-decoration: none;
+        }
+        footer p {
+            color: #85c1e9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">EFILIX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./eVideo Discovery.html">eVideo Discovery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./My Library.html">My Library</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./EPN Dashboard.html">EPN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Settings.html">Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container settings-container">
+        <h3 class="text-center mb-4">Settings</h3>
+        
+        <!-- User Profile Navigation Button -->
+        <div class="text-right mb-3">
+            <a href="./User Profile.html" class="btn btn-secondary">Go to User Profile</a>
+        </div>
+        
+        <!-- Account Information Section -->
+        <div>
+            <h5 class="section-heading">Account Information</h5>
+            <form id="accountForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" value="Ran banda" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" value="ran.banda@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" value="password123" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Update Account</button>
+            </form>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <!-- Subscription and Payment Settings Section -->
+        <div>
+            <h5 class="section-heading">Subscription/Payment Settings</h5>
+            <form id="paymentForm">
+                <div class="form-group">
+                    <label for="paymentMethod">Payment Method</label>
+                    <select id="paymentMethod" class="form-control">
+                        <option value="creditCard">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bankTransfer">Bank Transfer</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Update Payment Method</button>
+            </form>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <!-- Visual Appearance Settings Section -->
+        <div>
+            <h5 class="section-heading">Visual Appearance</h5>
+            <div class="form-group">
+                <label>Theme</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="theme" id="lightMode" value="light" checked>
+                    <label class="form-check-label" for="lightMode">Light Mode</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="theme" id="darkMode" value="dark">
+                    <label class="form-check-label" for="darkMode">Dark Mode</label>
+                </div>
+            </div>
+            <button class="btn btn-primary" onclick="saveTheme()">Save Theme</button>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <!-- Device Management Section -->
+        <div>
+            <h5 class="section-heading">Device Management</h5>
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Device 1 - Windows Laptop
+                    <button class="btn btn-danger btn-sm">Remove</button>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Device 2 - Android Phone
+                    <button class="btn btn-danger btn-sm">Remove</button>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Device 3 - iPad
+                    <button class="btn btn-danger btn-sm">Remove</button>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <!-- Language Preferences Section -->
+        <div>
+            <h5 class="section-heading">Language Preferences</h5>
+            <select id="language" class="form-control">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="zh">Chinese</option>
+            </select>
+            <button class="btn btn-primary mt-3" onclick="saveLanguage()">Save Language</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="./index.html" class="nav-link px-2">Home</a></li>
+                <li class="nav-item"><a href="./Contact Us.html" class="nav-link px-2">Contact Us</a></li>
+                <li class="nav-item"><a href="./Privacy Policy.html" class="nav-link px-2">Privacy Policy</a></li>
+                <li class="nav-item"><a href="./Terms of Service.html" class="nav-link px-2">Terms of Service</a></li>
+                <li class="nav-item"><a href="./About Us.html" class="nav-link px-2">About Us</a></li>
+            </ul>
+            <p class="text-center">© 2024 Eflix, Inc</p>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

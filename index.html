@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>EFILIX - Home</title>
+    <style>
+        /* Applying custom styles */
+        body {
+            background-color: #f5f7fa; /* Light gray background */
+            color: #333; /* Default text color */
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #3498db; /* Vibrant blue background */
+        }
+
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+            transition: color 0.3s;
+        }
+
+        .navbar-brand:hover, .nav-link:hover, .nav-item.active .nav-link {
+            color: #d6eaf8 !important; /* Lighter shade of blue */
+        }
+
+        /* Search Button Styling */
+        .btn-outline-secondary {
+            color: #fff;
+            background-color: #3498db; /* Vibrant blue */
+            border-color: #3498db;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-outline-secondary:hover {
+            background-color: #2980b9; /* Darker blue */
+            border-color: #2980b9;
+            color: #fff;
+        }
+
+        /* Button Styling */
+        .btn-primary {
+            background-color: #3498db;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+
+        /* Card Styling */
+        .card {
+            background-color: #e9ecef; /* Light card background */
+            border: 1px solid #3498db;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.3); /* Blue shadow */
+        }
+
+        .card-cover {
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s;
+        }
+
+        .card-cover:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer Styling */
+        footer {
+            border-top: 2px solid #3498db;
+            background-color: #2c3e50; /* Darker blue-gray */
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: #85c1e9; /* Light blue for contrast */
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #d6eaf8;
+            text-decoration: none;
+        }
+
+        footer p {
+            color: #85c1e9; /* Ensuring the text is visible */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">EFILIX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./eVideo Discovery.html">eVideo Discovery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./My Library.html">My Library</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./EPN Dashboard.html">EPN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Settings.html">Settings</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="videos, artists, genres" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
+        <h1 class="display-4 fw-bold">EFLIX</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Welcome to EFLIX – Your Ultimate EVC Entertainment Hub!</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <a href="./Registration.html?mode=register"><button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Sign in</button></a>
+                <a href="./Registration.html?mode=login"><button type="button" class="btn btn-outline-secondary btn-lg px-4">Log in</button></a>
+            </div>
+        </div>
+        <div class="overflow-hidden" style="max-height: 30vh;">
+            <div class="container px-5">
+                <img src="./Asset/Img/Web-series.webp" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2 border-bottom">Categories</h2>
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(./Asset/Img/Trending.webp);">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Trending</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(./Asset/Img/new.jpg);">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">New Releases</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(./Asset/Img/top.jpg);">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Top-Rated</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container">
+        <footer class="py-3 my-4 text-white text-center">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="./index.html" class="nav-link px-2">Home</a></li>
+                <li class="nav-item"><a href="./Contact Us.html" class="nav-link px-2">Contact Us</a></li>
+                <li class="nav-item"><a href="./Privacy Policy.html" class="nav-link px-2">Privacy Policy</a></li>
+                <li class="nav-item"><a href="./Terms of Service.html" class="nav-link px-2">Terms of Service</a></li>
+                <li class="nav-item"><a href="./About Us.html" class="nav-link px-2">About Us</a></li>
+            </ul>
+            <p class="text-center">© 2024 Eflix, Inc</p>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
